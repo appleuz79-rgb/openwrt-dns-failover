@@ -1,0 +1,13 @@
+{
+  "admin/services/dns-failover": {
+    "title": "DNS Failover",
+    "order": 61,
+    "action": {
+      "type": "view",
+      "path": "dns-failover/config"
+    },
+    "depends": {
+      "acl": [ "luci-app-dns-failover" ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "luci-app-dns-failover": {
+    "description": "DNS Failover monitor and manual selector",
+    "read": {
+      "uci": [ "dns-failover" ],
+      "ubus": {
+        "uci": [ "get" ],
+        "file": [ "read" ],
+        "service": [ "list" ]
+      }
+    },
+    "write": {
+      "uci": [ "dns-failover" ],
+      "ubus": {
+        "uci": [ "set", "add", "delete", "rename", "order", "commit", "apply", "confirm", "rollback" ],
+        "file": [ "exec" ]
+      },
+      "file": {
+        "/usr/sbin/dns-failover": [ "exec" ]
+      }
+    }
+  }
+}
